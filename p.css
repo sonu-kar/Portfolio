@@ -1,0 +1,860 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0a2d5f;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #0a2d5f;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0a2d5f;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  background: #0a2d5f;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 50%;
+  font-size: 1rem;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* Contact Section */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background: #0a2d5f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #06326d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 40px 15px;
+    margin: 20px 0;
+  }
+}
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #00274d;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-links a img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-links a img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+/* Skills Section */
+#skills {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#skills h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #00274d;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill {
+  width: 120px;
+  height: 120px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00274d;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.skill:hover {
+  background-color: #00274d;
+  color: white;
+  transform: scale(1.1);
+}
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover / Touch Effect */
+.profile-photo:hover {
+  transform: scale(1.2); /* Makes the photo bigger */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow for effect */
+}
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 12px;
+  width: 0; /* hidden by default */
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
+
+/* Skill Colors */
+.progress.html {
+  background: #e44d26;
+}
+
+.progress.css {
+  background: #264de4;
+}
+
+.progress.js {
+  background: #f7df1e;
+}
+
+/* Hover/Tap to Show */
+.skill:hover .progress {
+  width: var(--percent); /* custom property */
+}
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  background: #ddd;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 14px;
+  width: 0; /* hidden by default */
+  border-radius: 7px;
+  transition: width 1s ease-in-out;
+}
+
+/* Percentage text */
+.percent {
+  position: absolute;
+  right: 10px;
+  top: -22px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.6s ease;
+}
+
+/* Skill Colors */
+.progress.html {
+  background: #e44d26;
+  --percent: 90%;
+}
+
+.progress.css {
+  background: #264de4;
+  --percent: 80%;
+}
+
+.progress.js {
+  background: #f7df1e;
+  --percent: 70%;
+}
+
+/* Hover/Tap Effect */
+.skill:hover .progress {
+  width: var(--percent);
+}
+
+.skill:hover .percent {
+  opacity: 1; /* show percentage */
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg); /* start from top */
+}
+
+circle {
+  fill: none;
+  stroke-width: 12;
+  stroke: #ddd;
+  stroke-linecap: round;
+}
+
+circle:nth-child(2) {
+  stroke-dasharray: 377; /* 2πr, r=60 */
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Percentages */
+circle.html {
+  stroke: #e44d26;
+}
+circle.css {
+  stroke: #264de4;
+}
+circle.js {
+  stroke: #f7df1e;
+}
+
+/* Text inside circle */
+.skill-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.skill-text h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.skill-text p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Hover animation to reveal percentage */
+.circle:hover .html {
+  stroke-dashoffset: calc(377 - (377 * 90) / 100);
+}
+.circle:hover .css {
+  stroke-dashoffset: calc(377 - (377 * 80) / 100);
+}
+.circle:hover .js {
+  stroke-dashoffset: calc(377 - (377 * 70) / 100);
+}
+.skill-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 12;
+  stroke: #ddd;
+  stroke-linecap: round;
+}
+
+circle:nth-child(2) {
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Skill colors */
+circle.css { stroke: #264de4; }
+circle.html { stroke: #e44d26; }
+circle.java { stroke: #5382a1; }
+circle.dsa { stroke: #ff9800; }
+circle.oops { stroke: #9c27b0; }
+circle.js { stroke: #f7df1e; }
+circle.sql { stroke: #00758f; }
+
+/* Text inside circle */
+.skill-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.skill-text h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.skill-text p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Hover animations (fill based on percentage) */
+.circle:hover .css { stroke-dashoffset: calc(377 - (377 * 80) / 100); }
+.circle:hover .html { stroke-dashoffset: calc(377 - (377 * 90) / 100); }
+.circle:hover .java { stroke-dashoffset: calc(377 - (377 * 75) / 100); }
+.circle:hover .dsa { stroke-dashoffset: calc(377 - (377 * 70) / 100); }
+.circle:hover .oops { stroke-dashoffset: calc(377 - (377 * 85) / 100); }
+.circle:hover .js { stroke-dashoffset: calc(377 - (377 * 70) / 100); }
+.circle:hover .sql { stroke-dashoffset: calc(377 - (377 * 75) / 100); }
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #222;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Menu list */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu items */
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  background: rgba(255,255,255,0.1); /* container effect */
+}
+
+/* On hover */
+.navbar ul li a:hover {
+  background: #ff9800;   /* change color */
+  color: black;
+}
+
+/* When clicked (active state) */
+.navbar ul li a.active {
+  background: #4caf50;   /* green for active */
+  color: white;
+}
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px; /* makes it egg/oval shape */
+  background: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  background: #007bff; /* change color */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Active link (when clicked) */
+.navbar a.active {
+  background: #0056b3;
+  color: white;
+}
+.circle-navbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.circle-navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  padding: 0;
+}
+
+.circle-navbar li {
+  display: inline-block;
+}
+
+.circle-navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;   /* circle size */
+  height: 70px;  /* circle size */
+  border-radius: 50%; /* perfect circle */
+  background: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect */
+.circle-navbar a:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Active effect when clicked */
+.circle-navbar a.active {
+  background: #0056b3;
+  color: white;
+}
+.circle-navbar {
+  display: flex;
+  justify-content: flex-end; /* align right */
+  margin: 20px 40px; /* add right spacing */
+}
+.section {
+  padding: 80px 20px;   /* increase padding */
+  margin: 60px 0;       /* increase gap between sections */
+  text-align: center;
+}
+/* Default navbar */
+.circle-navbar {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide the hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0a2d5f;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .circle-navbar {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .circle-navbar.active {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block; /* show on mobile */
+  }
+}
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0a2d5f;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .circle-navbar {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    background: #f0f0f0;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    padding: 15px;
+  }
+
+  .circle-navbar a {
+    margin: 10px 0;
+    width: 100px;
+  }
+
+  .menu-toggle {
+    display: block; /* show 3 dots on mobile */
+  }
+
+  /* Show menu when active */
+  .circle-navbar.active {
+    display: flex;
+  }
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .circle-navbar {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .circle-navbar.active {
+    display: flex; /* show only when active */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0a2d5f;
+  }
+}
+/* Default hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000; /* change to white if dark header */
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate to "X" when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .circle-navbar {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  .circle-navbar.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .circle-navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+
+  /* Full-page gradient + moving stars */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #001133, #000000) repeat;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Star pattern overlay */
+body::before {
+  content: "";
+  position: fixed;      /* stays fixed behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: starMove 50s linear infinite;
+  z-index: -1;          /* behind everything */
+}
+
+@keyframes starMove {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+/* Make all sections transparent so the background shows */
+section, header, footer {
+  background: transparent;
+}
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: transparent; /* allows the body's gradient + stars to show */
+  color: white; /* optional: so text is readable */
+}
+.about-text p {
+  color: rgba(255, 255, 255, 0.8); /* light white / semi-transparent */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+.about-container img {
+  margin-top: 80px; /* adjust this value */
+}
+.skill-text h3,
+.skill-text p {
+  font-weight: bold; /* make it bold */
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 3s linear infinite;
+  display: inline-block;
+}
+
+/* Animate the gradient */
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+footer p {
+  font-weight: bold;
+  font-size: 16px;
+  background: linear-gradient(
+    to right,
+    #ff9999,   /* light red */
+    #ff66cc,   /* light pink */
+    #66ccff,   /* light blue */
+    #33ff99,   /* light green */
+    #cc99ff,   /* light purple */
+    #87cefa    /* light sky blue */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
